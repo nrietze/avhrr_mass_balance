@@ -13,6 +13,9 @@ print('Loading configurations...')
 # Select Season: winter, annual
 season = "annual"
 
+# Select LAC product type: scfg, scfv
+band = 'scfg'
+
 # Select method: CRG = closest reference glacier, AA = alpine average
 method = 'CRG'
 

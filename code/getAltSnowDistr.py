@@ -160,14 +160,16 @@ def netCDF2SnowPerAlt_old(xrDataArray,DEM,xcentr,ycentr,lengthunit,radius):
         GrDF = GrDF.fillna(method='bfill') # fills na after interpolation with following values (only important for low snow occurences)
         
         return GrDF
+
 #%%
 start_time = time.time()
 
-# Rmax = WOSM_rad.max()
-# DA_tot = DS_SeasAvg["band 1"].sel(
-#                 Lon = np.arange(x_center-Rmax , x_center+Rmax+unit,unit),
-#                 Lat = np.arange(y_center-Rmax , y_center+Rmax+unit,unit),
-#                 method='nearest')
+DA_tot = DS_SeasAvg["band 1"].sel(
+                Lon = np.arange(x_center-Rmax , x_center+Rmax+unit,unit),
+                Lat = np.arange(y_center-Rmax , y_center+Rmax+unit,unit),
+                method='nearest')
+
+OUT_PATH
 
 for i,R in enumerate(WOSM_rad):
 
@@ -175,7 +177,7 @@ for i,R in enumerate(WOSM_rad):
     
     # allgrouped[i] = netCDF2SnowPerAlt_old(DS_SeasAvg['band 1'],DEM,x_center,y_center,unit,R)
         
-    r_sub = int(Rmax/1e3 - R/1e3) 
+    r_sub = int(max_R - R/1e3) 
     
     if r_sub == 0:
         DA = DA_tot
@@ -191,7 +193,7 @@ print("Done: --- %s seconds ---" % (time.time() - start_time))
 
 # Store List of GrDF to pickle file in corresponding folder, one file per glacier
         
-f = open(outdir+'/allGrDF_%s.pckl'%glacier_id, 'wb')
+f = open(OUT_PATH + '/allGrDF_%s.pckl'%glacier_id, 'wb')
 pickle.dump(allgrouped, f)
 f.close()
 

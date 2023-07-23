@@ -7,20 +7,28 @@ Created on Sat Sep 26 17:36:11 2020
 """
 import os
 
-os.chdir('C:/Users/Nils Rietze/Documents/0_Uni Bern/MSc/MSc Thesis/code/final/')
       
 #%% ==========================================================================    
 # Run config
-exec(open("config.py").read())
+exec(open("./code/config.py").read())
 
+if not os.path.exists(f'./intermediate/avhrr/pso_summer_{band}.nc') or not os.path.exists(f'./intermediate/avhrr/pso_summer_{band}.nc'):
+    resp = input('The seasonal snow datasets are missing, do you want to compute them? \n  y / n \n (WARNING: This will take a while!)')
+    
+    if resp == 'y':
+        exec(open("./code/aggregate_netCDF.py"))
+    if resp == 'n':
+        print(f'Please create/move a folder called ./intermediate/avhrr/ into this parent directory and provide the seasonal datasets using the filenames: pso_summer_{band}.nc and pso_winter_{band}.nc')
+        pass
+    
 # Run importer
-exec(open("importer.py").read())
+exec(open("./code/importer.py").read())
 
 #%% Compute altitudinal distribution of snow occurrence for each WOSM size
-# exec(open("getAltSnowDistr.py").read())    
+# exec(open("./code/getAltSnowDistr.py").read())    
 
 #%% Calibrate Model:
-exec(open("main_calibrate.py").read())  
+exec(open("./code/main_calibrate.py").read())  
 
 # %% Compute Summer MB
 start = 1982
