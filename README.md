@@ -23,7 +23,7 @@ There are three code folders that serve for the different processing steps in th
 - The scripts in `thermal_drift_correction` are used to remove the temperature drift for all images in a thermal flight.
 - The folder `data` is empty and should contain the data that can be downloaded from Zenodo (see link on top).
 
-[to top](https://github.com/nrietze/avhrr_mass_balance/main/README.md)
+[to top](https://github.com/nrietze/avhrr_mass_balance/README.md)
 
 ## Software requirements
 **UPDATE VERSIONS**
@@ -31,9 +31,9 @@ The data pre-processing and data analysis was using Python 3.10.6, pandas (0.24.
 
 Code development and processing were carried out in Windows 10 (64 bit), but execution should (in theory) be platform independent.
 
-[to top](https://github.com/nrietze/avhrr_mass_balance/main/README.md)
+[to top](https://github.com/nrietze/avhrr_mass_balance/README.md)
 
 ## Contact
 Code development and maintenance: Nils Rietze ([nils.rietze@uzh.ch](nils.rietze@uzh.ch))
 
-[to top](https://github.com/nrietze/avhrr_mass_balance/main/README.md)
+[to top](https://github.com/nrietze/avhrr_mass_balance/README.md)
