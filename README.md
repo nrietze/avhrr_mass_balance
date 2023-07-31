@@ -12,8 +12,6 @@ The data used in this project is partly publicly available:
 ## Repository structure:
 There are three code folders that serve for the different processing steps in this study. Here is the structure and the included files in each folder:
 
-**INSERT TREE**
-
 ```bash
 │   .gitignore
 │   README.md
@@ -62,7 +60,7 @@ There are three code folders that serve for the different processing steps in th
     └───figures
 ```
 
-- The scripts in `analysis` are used to generate the main and supplementary figures as well as the supporting tables.
+- The files `ignore.txt` can be ignored, as they were needed to update the folders in GitHub.
 - The scripts in `classification` are used to prepare the drone imagery and run the random forest classification.
 - The scripts in `thermal_drift_correction` are used to remove the temperature drift for all images in a thermal flight.
 - The folder `data` is empty and should contain the data that can be downloaded from Zenodo (see link on top).
