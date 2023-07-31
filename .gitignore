@@ -1,5 +1,6 @@
 # Prevent users to commit their own .RProj
 *.Rproj
+.spyproject/config/
 
 # Temporary files
 *~
@@ -17,9 +18,11 @@
 #*README_files/
 
 # Ignore the following files and folders
+tree.txt
 *.ipynb
 /.ipynb_checkpoints
 *.html
+*.xml
 **/**/__pycache__/
 *.nc
 *.netcdf
