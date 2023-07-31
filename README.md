@@ -10,7 +10,7 @@ The data used in this project is partly publicly available:
 - AVHRR LAC snow cover maps, 10-day composites of visible or on-ground snow cover
 
 ## Repository structure:
-There are three code folders that serve for the different processing steps in this study. Here is the structure and the included files in each folder:
+Here is the structure and the included files in each folder:
 
 ```bash
 │   .gitignore
@@ -61,9 +61,29 @@ There are three code folders that serve for the different processing steps in th
 ```
 
 - The files `ignore.txt` can be ignored, as they were needed to update the folders in GitHub.
-- The scripts in `classification` are used to prepare the drone imagery and run the random forest classification.
-- The scripts in `thermal_drift_correction` are used to remove the temperature drift for all images in a thermal flight.
-- The folder `data` is empty and should contain the data that can be downloaded from Zenodo (see link on top).
+- Detailed information about how to run the code can be found below in the section #code.
+- The folder `data` issplit into three subfolders containing:
+  - `avhrr/10_d_snowmasks` contains AVHRR-derived snow cover maps as 10-day composites in daily netCDF (`.nc`) files with bands `scfv` and `scfg`.
+    *Change the location of these files accordingly in the `config` script.*
+  - `geodata`contains the auxiliary and supporting data for the snow map method, i.e. DEM, glacier attributes and centerpoints. 
+    The file `wkt.txt` contains the command line code to resample the SRTM30 DEM to the AVHRR snow cover maps using `gdalwarp`.
+  - `insitu` contains the seasonal mass balance observations copiled from WGMS and GLAMOS.
+- The folder `intermedate` will host any intermediate files compiled and stored during processing. Contents of this folder should not be deleted and are not temporary files.
+- The folder `output` will contain all figures, tables and other outputs produced in the scripts.
+
+[to top](https://github.com/nrietze/avhrr_mass_balance/README.md)
+
+## Code
+To run the AVHRR snow map method, you will need:
+a) a lot of time
+b) to adjust the path to you r original AVHRR snow maps (`.nc` files)
+
+Follow these steps to compute certain products:
+1) Compute seasonal snow maps:
+2) Compute altitudinal snow cover distributions:
+3) Tune the model on in situ observaitons:
+4) Generate mass balance time series of all 1228 glaciers analyzed in this study:
+5) Generate figures:
 
 [to top](https://github.com/nrietze/avhrr_mass_balance/README.md)
 
