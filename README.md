@@ -15,9 +15,51 @@ There are three code folders that serve for the different processing steps in th
 **INSERT TREE**
 
 ```bash
-├───code
+│   .gitignore
+│   README.md
 │
-└───data
+├───code
+│       aggregate_netCDF.py
+│       config.py
+│       environment.yml
+│       fig_3_scatterplots.py
+│       fig_4_TimeseriesRegions.py
+│       fig_5_CompareGeodetic.py
+│       fig_6_ECDF_WOSM.py
+│       fig_7_TemporalStability.py
+│       functions_model.py
+│       functions_plots.py
+│       getAltSnowDistr.py
+│       importer.py
+│       main.py
+│       main_calibrate.py
+│       main_plot.py
+│       main_validate.py
+│       parallel_AltSnowDist.py
+│       parallel_AltSnowDistr.sh
+│
+├───data
+│   ├───avhrr
+│   │   └───10_d_snowmasks
+│   │
+│   ├───geodata
+│   │       CentralEurope_ge02km2_List.csv
+│   │       dem_europe.tif
+│   │       wkt.txt
+│   │
+│   └───insitu
+│           all_insitu_annual.csv
+│           all_insitu_summer.csv
+│           all_insitu_winter.csv
+│
+├───intermediate
+│   │   avhrr_scenes_per_season.csv
+│   │
+│   └───avhrr
+│
+└───output
+    │
+    └───figures
 ```
 
 - The scripts in `analysis` are used to generate the main and supplementary figures as well as the supporting tables.
