@@ -2,9 +2,11 @@
 This repository contains the code used in my Master Thesis: *Seasonal Glacier Mass Balance Estimation Using AVHRR Optical Imagery*.
 
 The data used in this project is partly publicly available:
-- The SRTM 30 arcsec digital elevation model (DEM): **INSERT LINK**
+- The SRTMGL30 v021 global 30 arcsec digital elevation model (DEM): [https://lpdaac.usgs.gov/products/srtmgl30v021/](https://lpdaac.usgs.gov/products/srtmgl30v021/)
 - The outlines and attributes of glaciers from the Randolph Glacier inventory (version 6.0): [https://www.glims.org/RGI/](https://www.glims.org/RGI/)
-- The *in situ* mass balance observations (glaciological method) of glaciers in the European Alps (RGI region "Central Europe"): [https://wgms.ch/fogbrowser/](https://wgms.ch/fogbrowser/)
+- The *in situ* mass balance observations (glaciological method) of glaciers in the European Alps (RGI region "Central Europe"):[
+  - WGMS: [https://wgms.ch/fogbrowser](https://wgms.ch/fogbrowser/)
+  - GLAMOS (hydrological year product): [https://www.glamos.ch/en/downloads#mass-balance](https://www.glamos.ch/en/downloads#mass-balance)
 - AVHRR LAC snow cover maps, 10-day composites of visible or on-ground snow cover
 
 ## Repository structure:
